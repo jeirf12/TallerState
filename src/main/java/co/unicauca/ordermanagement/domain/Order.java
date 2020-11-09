@@ -93,7 +93,7 @@ public class Order {
     public boolean isEmpty() {
         return lines.isEmpty();
     }
-
+    //metodo adicionado
     public void orderedPayed(String parcelNumber) {
         orderState = orderState.orderedPayed(parcelNumber);
     }

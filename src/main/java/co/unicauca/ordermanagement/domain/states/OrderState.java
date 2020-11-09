@@ -70,7 +70,8 @@ public abstract class OrderState {
     public boolean isFinished() {
         return false;
     }
-
+    
+    //metodo adicionado
     public OrderState orderedPayed(String parcelNumber) {
         throw new IllegalStateException("No se puede pagar una orden cuando la orden está " + getStateDescription());
     }

@@ -35,6 +35,7 @@ public class OrderedState extends OrderState {
      * @return
      */
     @Override
+    //metodo adicionado
     public OrderState orderedPayed (String parcelNumber){
         if(!getOrder().isPaymentReceived()){
             throw new IllegalStateException("An order should not be send out when payment is not received.");

@@ -37,10 +37,11 @@ public class OrderTest {
 		order.addItem(pasta, 20);
 		assertEquals("Abierta", order.whatIsTheState());
 		order.confirmOrder();
+                //desde aqui se hicieron cambios
 		assertEquals("Ordenada", order.whatIsTheState());
                 order.orderedPayed("555555X");
                 assertEquals("Pagada", order.whatIsTheState());
-		order.orderSendOut();
+		order.orderSendOut();//hasta aqui
 		assertEquals("Enviada", order.whatIsTheState());
 		order.orderDelivered();
 		assertEquals("Entregada", order.whatIsTheState());
@@ -55,10 +56,11 @@ public class OrderTest {
 		order.addItem(pasta, 20);
 		assertEquals("Abierta", order.whatIsTheState());
 		order.confirmOrder();
+                //desde aqui se hicieron cambios
 		assertEquals("Ordenada", order.whatIsTheState());
-		order.orderedPayed("555555X");
+                order.orderedPayed("555555X");
                 assertEquals("Pagada", order.whatIsTheState());
-		order.orderSendOut();
+		order.orderSendOut();//hasta aqui
 		assertEquals("Enviada", order.whatIsTheState());
 		try{
                     order.cancel();
