@@ -7,11 +7,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ * Pruebas unitarias a los estados de los objetos de una orden
  *
- * @author ahurtado
+ * @author Jhonfer Ruiz, Jhonny Rosero 
  */
 public class OrderTest {
-        private Order order;
+  	private Order order;
 	private String address;
 	private Dish vegetariano;
 	private Dish pasta;
@@ -37,10 +38,10 @@ public class OrderTest {
 		order.addItem(pasta, 20);
 		assertEquals("Abierta", order.whatIsTheState());
 		order.confirmOrder();
-                //desde aqui se hicieron cambios
+  		//desde aqui se hicieron cambios
 		assertEquals("Ordenada", order.whatIsTheState());
-                order.orderedPayed("555555X");
-                assertEquals("Pagada", order.whatIsTheState());
+  		order.orderedPayed("555555X");
+  		assertEquals("Pagada", order.whatIsTheState());
 		order.orderSendOut();//hasta aqui
 		assertEquals("Enviada", order.whatIsTheState());
 		order.orderDelivered();
@@ -48,7 +49,7 @@ public class OrderTest {
 		assertTrue(order.isFinished());
 	}
 
-        @Test
+  	@Test
 	public void testExceptionalFlow() {
 		order.setAddress(address);
 		order.setPaymentReceived(true);
@@ -56,30 +57,28 @@ public class OrderTest {
 		order.addItem(pasta, 20);
 		assertEquals("Abierta", order.whatIsTheState());
 		order.confirmOrder();
-                //desde aqui se hicieron cambios
+  		//desde aqui se hicieron cambios
 		assertEquals("Ordenada", order.whatIsTheState());
-                order.orderedPayed("555555X");
-                assertEquals("Pagada", order.whatIsTheState());
+  		order.orderedPayed("555555X");
+  		assertEquals("Pagada", order.whatIsTheState());
 		order.orderSendOut();//hasta aqui
 		assertEquals("Enviada", order.whatIsTheState());
 		try{
-                    order.cancel();
-                }
-                catch(Exception exp){
-                    assertEquals(exp.getMessage(),"No se puede cancelar la orden cuando la orden está Enviada");
-                }
-                
+  			order.cancel();
+  		}catch(Exception exp){
+  			assertEquals(exp.getMessage(),"No se puede cancelar la orden cuando la orden está Enviada");
+  		}
 	}
-        
-        @Test
+
+  	@Test
 	public void AlternativeFlow() {
 		order.setAddress(address);
 		order.setPaymentReceived(true);
 		order.addItem(vegetariano, 4);
-                assertEquals("Abierta", order.whatIsTheState());
+  		assertEquals("Abierta", order.whatIsTheState());
 		order.confirmOrder();
-                assertEquals("Ordenada", order.whatIsTheState());
-                order.cancel();
-                assertEquals("Cancelada", order.whatIsTheState());      
+  		assertEquals("Ordenada", order.whatIsTheState());
+  		order.cancel();
+  		assertEquals("Cancelada", order.whatIsTheState());      
 	}
 }

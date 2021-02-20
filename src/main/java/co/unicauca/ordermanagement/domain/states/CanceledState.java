@@ -5,7 +5,7 @@ import co.unicauca.ordermanagement.domain.Order;
 /**
  * Estado cancelado
  *
- * @author Julio Hurtado, Libardo Pantoja
+ * @author Jhonfer Ruiz, Jhonny Rosero
  */
 public class CanceledState extends OrderState {
 

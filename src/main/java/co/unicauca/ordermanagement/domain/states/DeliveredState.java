@@ -5,7 +5,7 @@ import co.unicauca.ordermanagement.domain.Order;
 /**
  * Estado entregado
  *
- * @author Julio Hurtado, Libardo Pantoja
+ * @author Jhonfer Ruiz, Jhonny Rosero
  */
 public class DeliveredState extends OrderState {
 

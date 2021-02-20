@@ -3,7 +3,7 @@ package co.unicauca.ordermanagement.domain;
 /**
  * Item del pedido, en el diagrama de clases aparece como Line
  *
- * @author Julio Hurtado, Libardo Pantoja
+ * @author Jhonfer Ruiz, Jhonny Rosero 
  */
 public class Item {
 

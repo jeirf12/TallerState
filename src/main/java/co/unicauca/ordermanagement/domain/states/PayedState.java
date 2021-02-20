@@ -4,8 +4,7 @@ import co.unicauca.ordermanagement.domain.Order;
 
 /**
  *  estado pagado - estado adicionado
- * @author Jhonny Rosero
- * @author Jhonfer Ruiz
+ * @author Jhonfer Ruiz, Jhonny Rosero
  */
 public class PayedState extends OrderState{
 

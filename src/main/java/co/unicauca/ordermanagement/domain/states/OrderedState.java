@@ -5,7 +5,7 @@ import co.unicauca.ordermanagement.domain.Order;
 /**
  * Estado ordenado
  *
- * @author ahurtado
+ * @author Jhonfer Ruiz, Jhonny Rosero
  */
 public class OrderedState extends OrderState {
 

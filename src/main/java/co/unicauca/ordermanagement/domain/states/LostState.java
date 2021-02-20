@@ -5,7 +5,7 @@ import co.unicauca.ordermanagement.domain.Order;
 /**
  * Estado perdido
  *
- * @author Julio Hurtado, Libardo Pantoja
+ * @author Jhonfer Ruiz, Jhonny Rosero 
  */
 public class LostState extends OrderState {
 

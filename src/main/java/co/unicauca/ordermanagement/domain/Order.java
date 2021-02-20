@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Contexto
+ * Contexto o estado de una orden general
  *
- * @author Libardo Pantoja, Julio Hurtado
+ * @author Jhonfer Ruiz, Jhonny Rosero 
  */
 public class Order {
 

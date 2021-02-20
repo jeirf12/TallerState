@@ -7,7 +7,7 @@ import co.unicauca.ordermanagement.domain.Order;
 /**
  * Estado abierto o inical
  *
- * @author Julio Hurtado, Libardo Pantoja
+ * @author Jhonfer Ruiz, Jhonny Rosero
  */
 public class OpenState extends OrderState {
 
